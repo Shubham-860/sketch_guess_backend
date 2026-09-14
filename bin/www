@@ -25,7 +25,7 @@ var server = http.createServer(app);
 
 var io = new Server(server, {
     cors: {
-        origin: ["http://localhost:5173"],
+        origin: ["http://localhost:5173","https://sketch-guess-shubham.vercel.app/"],
     }
 })
 registerSocketHandlers(io);
