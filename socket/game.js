@@ -54,7 +54,7 @@ function startRound(io, room) {
         turn: room.turnNumber,
         totalTurns: room.totalTurns
     });
-    sendNotification(io, room.id, "system", `round ${room.turnNumber}/${room.totalTurns}: ${drawer ? drawer.name : "someone"} is choosing a word...`);
+    sendNotification(io, room.id, "system", `${drawer ? drawer.name : "someone"} is choosing a word...`);
 
     // if drawer doesnt pick in 10s skip turn
     room.pickTimeout = setTimeout(() => {
